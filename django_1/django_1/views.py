@@ -6,7 +6,7 @@ from django.shortcuts import render
 
 def home(request): # means ek request pe mujhe is home to return karna hai 
     # return HttpResponse("this is the home page")
-    return render(request,'index.html')
+    return render(request,'websites/index.html')
 
 def about(request): # means ek request pe mujhe is home to return karna hai 
     return HttpResponse("this is the about page") 
