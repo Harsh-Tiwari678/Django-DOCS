@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , include
 from . import views # hamari current directiry mein se import kar lijiye views ko 
 
 urlpatterns = [
@@ -23,4 +23,5 @@ urlpatterns = [
     path('',views.home,name="Home Page"), # home routee hai toh likhna nhi padta path ko 
     path('about/', views.about,name="Abour Page"),
     path('contact/', views.contact,name="Contact Page"), 
+    path('basicApp/', include('basicApp.urls'))  #transfer the control
 ]
