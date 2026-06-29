@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views # hamari current directiry mein se import kar lijiye views ko 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.home,name="Home Page"), # home routee hai toh likhna nhi padta path ko 
+    path('about/', views.about,name="Abour Page"),
+    path('contact/', views.contact,name="Contact Page"), 
 ]
