@@ -23,5 +23,6 @@ urlpatterns = [
     path('',views.home,name="Home Page"), # home routee hai toh likhna nhi padta path ko 
     path('about/', views.about,name="Abour Page"),
     path('contact/', views.contact,name="Contact Page"), 
-    path('basicApp/', include('basicApp.urls'))  #transfer the control
+    path('basicApp/', include('basicApp.urls')), #transfer the control
+    path('_reload_/',include("django_browser_reload.urls"))
 ]
